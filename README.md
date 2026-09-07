@@ -15,3 +15,14 @@ Then create a "mods" folder in your game update directory:
 /dev_hdd0/game/{region}/usdir/mods
 ```
 Place any custom maps in that directory and they will automatically be loaded under the "Custom Maps" menu in multiplayer.
+
+## Example Setup
+```
+/dev_hdd0/game/blus30377/usdir/patch_mp.ff
+/dev_hdd0/game/blus30377/usdir/mods/imagefile7.pak
+/dev_hdd0/game/blus30377/usdir/mods/imagefile8.pak
+/dev_hdd0/game/blus30377/usdir/mods/mp_shipment_xmas.ff
+/dev_hdd0/game/blus30377/usdir/mods/mp_shipment_xmas_load.ff
+/dev_hdd0/game/blus30377/usdir/mods/mp_havana.ff
+/dev_hdd0/game/blus30377/usdir/mods/mp_havana_load.ff
+```
