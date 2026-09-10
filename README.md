@@ -16,13 +16,9 @@ Then create a "mods" folder in your game update directory:
 ```
 Place any custom maps in that directory and they will automatically be loaded under the "Custom Maps" menu in multiplayer.
 
-## Example Setup
-```
-/dev_hdd0/game/blus30377/usdir/patch_mp.ff
-/dev_hdd0/game/blus30377/usdir/mods/imagefile7.pak
-/dev_hdd0/game/blus30377/usdir/mods/imagefile8.pak
-/dev_hdd0/game/blus30377/usdir/mods/mp_shipment_xmas.ff
-/dev_hdd0/game/blus30377/usdir/mods/mp_shipment_xmas_load.ff
-/dev_hdd0/game/blus30377/usdir/mods/mp_havana.ff
-/dev_hdd0/game/blus30377/usdir/mods/mp_havana_load.ff
-```
+The `mods` folder is optional. With the matching `default_mp.self` and `patch_mp.ff` installed together, Custom Maps is hidden when no custom-map main fastfiles are found under `mods`. Only installed custom maps appear in the list. Restart the game after adding, removing, or renaming map folders.
+
+### Custom map previews
+Copy `maps/ui/custom_ui_mp.ff` to `/dev_hdd0/game/{region}/usdir/mods/ui/custom_ui_mp.ff`. This self-contained fastfile supplies the custom-map menu previews; it does not require a UI PAK.
+
+Use it together with the updated `patch_mp.ff` and a patched `default_mp.self` that loads `custom_ui_mp`. The UI fastfile loads at startup and when returning to the frontend. Map folders can remain in their own subdirectories under `mods`, with their own texture packages.
