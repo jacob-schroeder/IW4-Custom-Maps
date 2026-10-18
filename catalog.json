@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "revision": 1,
+  "packages": [
+    {
+      "id": "map.mp_havana",
+      "name": "Havana",
+      "category": "maps",
+      "version": "1.0.0",
+      "description": "Havana custom multiplayer map.",
+      "dependencies": [],
+      "files": [
+        {
+          "path": "mods/maps/mp_havana/mp_havana.ff",
+          "size": 32803929,
+          "sha256": "eadb1dd7451e5e08098cdf4a53e328effaa6d8b7795ed79182af7f2201f20f40"
+        },
+        {
+          "path": "mods/maps/mp_havana/mp_havana_load.ff",
+          "size": 1370,
+          "sha256": "34d19359597c9a226ca44558103098f2e0db50c3c4805ce0ee5afd53a8dd3cce"
+        },
+        {
+          "path": "mods/maps/mp_havana/mp_havana.pak",
+          "size": 93386365,
+          "sha256": "a8d4b9fe14f16264b93cf808c0a7765488a082e4e6a812b15751f674b6e67e83"
+        }
+      ]
+    },
+    {
+      "id": "map.mp_shipment_xmas",
+      "name": "Shipment Christmas",
+      "category": "maps",
+      "version": "1.0.0",
+      "description": "Shipment Christmas custom multiplayer map.",
+      "dependencies": [],
+      "files": [
+        {
+          "path": "mods/maps/mp_shipment_xmas/mp_shipment_xmas.ff",
+          "size": 23628736,
+          "sha256": "7846c285f687e24620a3d0205368984d02fa514e40e249accf515ec6e11a018f"
+        },
+        {
+          "path": "mods/maps/mp_shipment_xmas/mp_shipment_xmas_load.ff",
+          "size": 1576,
+          "sha256": "4d5a751defbae8d75b8aca1bb0509093b991722435bbe3b2072595352b287866"
+        },
+        {
+          "path": "mods/maps/mp_shipment_xmas/mp_shipment_xmas.pak",
+          "size": 26182696,
+          "sha256": "6d77b5cc963893445aecdf8c723b7de47964b199ec0962e62272f9c57afee25c"
+        }
+      ]
+    },
+    {
+      "id": "ui.custom_ui_mp",
+      "name": "Custom Map Previews",
+      "category": "ui",
+      "version": "1.0.0",
+      "description": "Custom-map menu preview images.",
+      "dependencies": [],
+      "files": [
+        {
+          "path": "mods/ui/custom_ui_mp.ff",
+          "size": 905806,
+          "sha256": "b2a9ac45007b2c3a80f5ac1ce757a286baf09accbef92b06b7b4dd0ffe3abd96"
+        }
+      ]
+    },
+    {
+      "id": "menu.patch_mp",
+      "name": "Multiplayer Menus",
+      "category": "menus",
+      "version": "1.0.0",
+      "description": "Multiplayer menu fastfile.",
+      "dependencies": [],
+      "files": [
+        {
+          "path": "mods/menus/patch_mp.ff",
+          "size": 5422598,
+          "sha256": "68d0a4d13a9a189f4cca016f69236048f8c6d90144185bb11e8b114e0bacfba9"
+        }
+      ]
+    }
+  ]
+}
