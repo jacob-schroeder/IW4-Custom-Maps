@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 1,
+  "revision": 2,
   "packages": [
     {
       "id": "map.mp_havana",
@@ -71,14 +71,14 @@
       "id": "menu.patch_mp",
       "name": "Multiplayer Menus",
       "category": "menus",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "description": "Multiplayer menu fastfile.",
       "dependencies": [],
       "files": [
         {
           "path": "mods/menus/patch_mp.ff",
-          "size": 5422598,
-          "sha256": "68d0a4d13a9a189f4cca016f69236048f8c6d90144185bb11e8b114e0bacfba9"
+          "size": 5443516,
+          "sha256": "137c8e75b1ff2c324e3d7ca9939bd19b6a8fa02bb0622eaca34d3eced9df3a47"
         }
       ]
     }

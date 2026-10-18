@@ -2,10 +2,10 @@
 
 Custom maps, weapons, UI, and menus for PlayStation 3 Modern Warfare 2 (2009).
 
-This layout and catalog prepare the repository for the Content menu integration.
-The currently released 2.5.0 SELF does not read this catalog and still expects map
-folders directly beneath `mods`. Publish this reorganization together with a SELF
-that supports the categorized paths; the menu integration is still to be added.
+The Content menu is supported by the tested BLUS30377 CFW 2.5.0 release in
+[IW4-Binaries](https://github.com/jacob-schroeder/IW4-Binaries/). It reads this
+catalog and installs selected packages into the categorized paths below. The
+tested release is for BLUS30377 CFW; other regions and HEN are not covered.
 
 ## Repository and installation layout
 
@@ -52,10 +52,9 @@ release copy before refreshing the catalog:
 cp patch_mp.ff mods/menus/patch_mp.ff
 ```
 
-The initial installation must supply a bootstrap menu that can open Content
-before optional downloads are available. The future installer cannot depend on
-downloading `mods/menus/patch_mp.ff` to expose its own install button. The SELF
-integration must also handle loading menu fastfiles from the new directory.
+Install the root `USRDIR/patch_mp.ff` bootstrap manually alongside the SELF
+before opening Content. The optional `mods/menus/patch_mp.ff` package does not
+replace that active bootstrap.
 
 ## Catalog contract
 
@@ -76,16 +75,32 @@ are Havana, Shipment Christmas, Custom Map Previews, and Multiplayer Menus.
 | `files[].sha256` | Lowercase SHA-256 of the raw file bytes, generated from the payload. |
 
 A map is one package containing all released files in its map folder, including
-any load fastfile and texture package. The client should verify the complete
-package before activating it. A file can belong to only one package; shared content should be a
-separate package referenced through `dependencies`. Downloads must not accept
+any load fastfile and texture package. The client downloads only the selected
+package. New downloads are checked against their declared size and SHA-256
+before use. Existing regular files with the expected size count as installed;
+existing-file checks do not track package versions or hash the file. Files with
+the wrong size, or existing non-regular files at a target path, are reported as
+different and are not replaced. Dependencies must be empty because dependency
+installation is unsupported. A file can belong to only one package.
+Downloads must not accept
 absolute paths, traversal, symlinks, or the reserved `.iw4-download-part` suffix.
 Paths use printable ASCII, are at most 511 bytes, and cannot contain
 backslashes or any of `: ? # * " < > | %`.
 
-The client should resolve the published revision to one Git commit and fetch
-both the catalog and selected files from that commit. URLs are derived from the
-known repository and each file path rather than stored as mutable download URLs.
+Opening Content fetches the catalog in the background when no catalog is
+cached; Square refreshes it. Catalog errors and offline access do not block the
+main menu. The client resolves the repository's main branch to one Git commit
+and fetches both the catalog and selected files from that commit. URLs are
+derived from the known repository and each file path rather than stored as
+mutable download URLs. Download progress is shown in a centered bar based on
+the missing file bytes. A successful install restarts the game automatically.
+
+The current client accepts catalogs up to 64 KiB, with at most 24 packages and
+128 files. Its ASCII byte-capacity limits are 47 for package IDs, 63 for names,
+111 for descriptions, and 19 for versions. Paths retain the 511-byte limit.
+Maps and UI use the recursive loader paths shown above. Menu packages are stored
+under `mods/menus`, while the root bootstrap remains active. The weapons category
+is recognized by the catalog; weapon fastfiles are not part of this tested release.
 
 ## Adding or updating content
 
@@ -113,6 +128,7 @@ categories, invalid paths, missing files, invalid dependency references, and
 payloads absent from the catalog. It does not modify fastfiles, contact GitHub,
 publish, or change the SELF.
 
-The Content menu still needs the SELF command bridge, a catalog feeder, package
-selection, installed-version tracking, and the new loader paths. The compatible
-SELF will be supplied through [IW4-Binaries](https://github.com/jacob-schroeder/IW4-Binaries/).
+Use `release/blus30377/cfw/default_mp.self` from
+[IW4-Binaries](https://github.com/jacob-schroeder/IW4-Binaries/) with this
+repository's root [`patch_mp.ff`](patch_mp.ff). Copy both into
+`/dev_hdd0/game/BLUS30377/USRDIR/` for the tested pair.
