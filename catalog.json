@@ -1,7 +1,37 @@
 {
   "schemaVersion": 1,
-  "revision": 2,
+  "revision": 3,
   "packages": [
+    {
+      "id": "map.mp_bloc",
+      "name": "Bloc",
+      "category": "maps",
+      "version": "1.0.0",
+      "description": "Bloc custom multiplayer map.",
+      "dependencies": [],
+      "files": [
+        {
+          "path": "mods/maps/mp_bloc/mp_bloc.ff",
+          "size": 22674021,
+          "sha256": "24cf8110502c7dbd71c3cdaf95f1a7b2e84b13d1100906fc0779b4d2a945281d"
+        },
+        {
+          "path": "mods/maps/mp_bloc/mp_bloc_load.ff",
+          "size": 437,
+          "sha256": "06556e7e0a3d7bf1026f1b6d0fd52610f123e16ebe7f39332318556191ac5468"
+        },
+        {
+          "path": "mods/maps/mp_bloc/mp_bloc.pak",
+          "size": 100371581,
+          "sha256": "c77ce87e862dc0882953539b24d3106c1e0d00fc613e34157eee8acc1797f4ff"
+        },
+        {
+          "path": "mods/maps/mp_bloc/mp_bloc_snd.pak",
+          "size": 15162003,
+          "sha256": "a5fd0a1eab7a102fd2ea0f6b9ba1f53e63d9b5cd53c7779c3f532c272bba7997"
+        }
+      ]
+    },
     {
       "id": "map.mp_havana",
       "name": "Havana",
@@ -56,14 +86,14 @@
       "id": "ui.custom_ui_mp",
       "name": "Custom Map Previews",
       "category": "ui",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "description": "Custom-map menu preview images.",
       "dependencies": [],
       "files": [
         {
           "path": "mods/ui/custom_ui_mp.ff",
-          "size": 905806,
-          "sha256": "b2a9ac45007b2c3a80f5ac1ce757a286baf09accbef92b06b7b4dd0ffe3abd96"
+          "size": 1223946,
+          "sha256": "02613a9f0ae5090a19a3e0b9eedba44b697ef3c7eee015ced4c1fea9abcdf690"
         }
       ]
     },
@@ -71,14 +101,14 @@
       "id": "menu.patch_mp",
       "name": "Multiplayer Menus",
       "category": "menus",
-      "version": "1.0.1",
+      "version": "1.0.2",
       "description": "Multiplayer menu fastfile.",
       "dependencies": [],
       "files": [
         {
           "path": "mods/menus/patch_mp.ff",
-          "size": 5443516,
-          "sha256": "137c8e75b1ff2c324e3d7ca9939bd19b6a8fa02bb0622eaca34d3eced9df3a47"
+          "size": 7341826,
+          "sha256": "8cfa79a66f40bba91d891a7892996fe6ff30f5f051d0c251890e4eba629b3456"
         }
       ]
     }
