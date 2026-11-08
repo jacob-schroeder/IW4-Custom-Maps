@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 3,
+  "revision": 4,
   "packages": [
     {
       "id": "map.mp_bloc",
@@ -101,14 +101,14 @@
       "id": "menu.patch_mp",
       "name": "Multiplayer Menus",
       "category": "menus",
-      "version": "1.0.2",
+      "version": "1.0.3",
       "description": "Multiplayer menu fastfile.",
       "dependencies": [],
       "files": [
         {
           "path": "mods/menus/patch_mp.ff",
-          "size": 7341826,
-          "sha256": "8cfa79a66f40bba91d891a7892996fe6ff30f5f051d0c251890e4eba629b3456"
+          "size": 7423228,
+          "sha256": "57e9e54dc2eef76d0244149227db5399218de82a02aefe67a22c07e2965524c4"
         }
       ]
     }
